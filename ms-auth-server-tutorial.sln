@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestKatana", "TestKatana\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebApi", "TestWebApi\TestWebApi.csproj", "{4A41722C-3FF6-4006-8629-8A9D6D1F253B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSignalR", "TestSignalR\TestSignalR.csproj", "{5D5136E5-3298-472F-99BC-9B1BF607C5C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4A41722C-3FF6-4006-8629-8A9D6D1F253B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A41722C-3FF6-4006-8629-8A9D6D1F253B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A41722C-3FF6-4006-8629-8A9D6D1F253B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D5136E5-3298-472F-99BC-9B1BF607C5C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5136E5-3298-472F-99BC-9B1BF607C5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5136E5-3298-472F-99BC-9B1BF607C5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5136E5-3298-472F-99BC-9B1BF607C5C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

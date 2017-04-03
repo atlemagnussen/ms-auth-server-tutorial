@@ -4,6 +4,8 @@
     <title>@Model.title</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/bugs.js"></script>
+    <script src="js/jquery.signalR-2.2.1.min.js"></script>
+    <script src="signalr/hubs"></script>
 </head>
     <body>
         <header>
@@ -11,10 +13,21 @@
         </header>
         <ul id="bugsHolder"></div>
 
+        <p id="status"></p>
+        <button id="getone">get one</button>
         <script>
             $(function () {
-                bugsManager.get("bugsHolder");
+                bugsManager.build("bugsHolder");
+                bugsManager.signal("status");
+
             });
         </script>
+        <style>
+            #status {
+                /*width: 500px;
+                height: 500px;*/
+                white-space: pre;
+            }
+        </style>
     </body>
 </html>

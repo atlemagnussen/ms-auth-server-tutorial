@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using Microsoft.AspNet.SignalR;
+using TestKatana.hubs;
 using TestKatana.Logic;
 using TestKatana.Model;
 
@@ -7,7 +9,15 @@ namespace TestKatana.controllers
 {
     public class BugsController : ApiController
     {
-        readonly BugsRepository _bugsRepository = new BugsRepository();
+        private readonly BugsRepository _bugsRepository;
+        private IHubContext _hub;
+
+        public BugsController()
+        {
+            _bugsRepository = new BugsRepository();
+            _hub = GlobalHost.ConnectionManager.GetHubContext<BugHub>();
+        }
+        
 
         // GET api/<controller>
         public IEnumerable<Bug> Get()
@@ -18,6 +28,7 @@ namespace TestKatana.controllers
         // GET api/<controller>/5
         public Bug Get(int id)
         {
+            _hub.Clients.All.sayHello("from signalR");
             return _bugsRepository.Get(id);
         }
 
